@@ -1,5 +1,7 @@
 package org.apache.bookkeeper.client;
 
+import org.junit.Test;
+
 public class BookKeeperAdminTest {
 
     public BookKeeperAdminTest() {
