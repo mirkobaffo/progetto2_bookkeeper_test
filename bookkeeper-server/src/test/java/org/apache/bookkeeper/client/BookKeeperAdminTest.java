@@ -21,7 +21,7 @@ import junit.framework.TestCase;
  */
 //@RunWith(value=Parameterized.class)
 @RunWith(Parameterized.class)
-public class MyInitNewClusterTest extends BookKeeperClusterTestCase {
+public class BookKeeperAdminTest extends BookKeeperClusterTestCase {
 
     private boolean result;
     private ServerConfiguration conf;
@@ -29,7 +29,7 @@ public class MyInitNewClusterTest extends BookKeeperClusterTestCase {
     private static final int numOfBookies = 2;
     private final int lostBookieRecoveryDelayInitValue = 1800;
 
-    public MyInitNewClusterTest(boolean result, String conf) throws Exception {
+    public BookKeeperAdminTest(boolean result, String conf) throws Exception {
       super(numOfBookies, 480);
       baseConf.setLostBookieRecoveryDelay(lostBookieRecoveryDelayInitValue);
       baseConf.setOpenLedgerRereplicationGracePeriod(String.valueOf(30000));
