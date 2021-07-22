@@ -72,7 +72,7 @@ public class CpuAffinityImpl {
             int cpu = pickAvailableCpu();
             CpuAffinityJni.setAffinity(cpu);
 
-            log.info("Thread {} has successfully acquired ownership of cpu {}", Thread.currentThread().getName(), cpu);
+            //log.info("Thread {} has successfully acquired ownership of cpu {}", Thread.currentThread().getName(), cpu);
         } catch (IOException e) {
             throw new RuntimeException("Failed to acquire CPU core: " + e.getMessage());
         }
